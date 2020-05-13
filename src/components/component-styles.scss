@@ -1,0 +1,23 @@
+.github-logo {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    max-width: 30px;
+    height: auto;
+}
+
+.linkedin-logo {
+    max-width: 30px;
+    height: auto;
+}
+
+.custom-container {
+    height: 100vh;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .info-text {
+        color: white;
+    }
+}
