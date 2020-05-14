@@ -4,13 +4,14 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink
+    NavLink,
+    NavbarText
 } from 'reactstrap';
 
 export function NavigationBar() {
     return (
         <Navbar color="dark" dark fixed="top" expand="md">
-            <NavbarBrand>Shaurya Madan</NavbarBrand>
+            <NavbarBrand onClick={() => document.getElementById('information')?.scrollIntoView({behavior: 'smooth'})}>Shaurya Madan</NavbarBrand>
             <Nav className="mr-auto" navbar>
                 <NavItem>
                     <NavLink target="_blank" href="https://github.com/ShauryaMdn">
@@ -25,6 +26,9 @@ export function NavigationBar() {
                 <NavItem>
                     <NavLink target="_blank" href={'../assets/files/resume.pdf'}>Resume</NavLink>
                 </NavItem>
+            </Nav>
+            <Nav navbar>
+                <NavbarText className="navigation-text" onClick={() => document.getElementById('experience')?.scrollIntoView({behavior: 'smooth'})}>Experience</NavbarText>
             </Nav>
         </Navbar>
     );

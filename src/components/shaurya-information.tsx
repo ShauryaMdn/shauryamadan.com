@@ -1,16 +1,16 @@
 import React from  'react';
 
 import './component-styles.scss'
+import { Row, Container } from 'reactstrap';
 
 export function ShauryaInformation() {
     return (
-        <div className="container custom-container">
-            <div className="row justify-content-center">
-                <h1 className="display-3 info-text">Shaurya Madan</h1>
+        <Container fluid className="info-container">
+            <div className="name-container">
+                <Row className="justify-content-center name">Shaurya</Row>
+                <Row className="justify-content-center name">Madan</Row>
             </div>
-            <div className="row justify-content-center">
-                <p className="lead info-text">3A Waterloo Computer Engineering Student</p>
-            </div>
-        </div>
+            <Row className="justify-content-center description">3A Waterloo Computer Engineering Student</Row>
+        </Container>
     );
 }

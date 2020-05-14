@@ -10,14 +10,109 @@
     height: auto;
 }
 
-.custom-container {
+.navigation-text {
+    cursor: pointer;
+}
+
+.info-container {
     height: 100vh;
-    background: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-image: url('../assets/images/information-background.svg');
+    background-size: cover;
 
-    .info-text {
+    .name-container {
+        width: fit-content;
+        border-bottom: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .name {
+            font-size: 6.5em;
+            color: white;
+            line-height: normal;
+        }
+    }
+
+    .description {
+        padding-top: 10px;
         color: white;
+    }
+}
+
+.experience-container {
+    background-color: #f4efe0;
+    padding: 65px 0px;
+
+    .experience-title {
+
+        h1 {
+            display: flex;
+            flex-direction: row;
+            color: lightseagreen;
+        }
+    
+        h1:before, h1:after{
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid lightseagreen;
+            margin: auto;
+        }
+    
+        h1:before {
+            margin-left: 120px;
+            margin-right: 10px
+        }
+    
+        h1:after {
+            margin-right: 120px;
+            margin-left: 10px
+        }
+    }
+
+    .experiences {
+        width: 70vw;
+        margin: 20px auto;
+
+        .experience-row {
+            padding: 25px 0px;
+
+            .image-container {
+                background-color: white;
+                border-radius: 10px;
+                padding: 0px 10px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .employer-name {
+                color: rgb(128, 3, 245);
+            }
+
+            .position-and-time {
+                color: rgb(143, 143, 143);
+            }
+        }
+
+        .employer-text {
+            margin: 0px;
+        }
+    
+        .experience-card {
+            transition: transform 0.5s ease;
+            -moz-transition: transform 0.5s ease;
+            -webkit-transition: transform 0.5s ease;
+    
+            &:hover {
+                -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+            }
+        }
     }
 }

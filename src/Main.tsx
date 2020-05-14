@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { NavigationBar, ShauryaInformation } from "./components";
+import { ExperienceCards, NavigationBar, ShauryaInformation } from "./components";
 import './Main.scss';
 
 function Main() {
   return (
-    <div className="background">
+    <div>
       <NavigationBar></NavigationBar>
       <ShauryaInformation></ShauryaInformation>
+      <ExperienceCards></ExperienceCards>
     </div>
   );
 }
