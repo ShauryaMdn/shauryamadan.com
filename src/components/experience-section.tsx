@@ -8,7 +8,7 @@ import {
 export function ExperienceSection() {
     return (
         <Container fluid className="experience-container" id="experience">
-            <div className="experience-title">
+            <div className="section-title">
                 <h1>My Work Experience</h1>
             </div>
             <div className="experiences">
