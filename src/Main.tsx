@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ExperienceCards, NavigationBar, ShauryaInformation } from "./components";
+import { ExperienceSection, NavigationBar, ShauryaInformation, ProjectsSection } from "./components";
 import './Main.scss';
 
 function Main() {
@@ -8,7 +8,8 @@ function Main() {
     <div>
       <NavigationBar></NavigationBar>
       <ShauryaInformation></ShauryaInformation>
-      <ExperienceCards></ExperienceCards>
+      <ExperienceSection></ExperienceSection>
+      <ProjectsSection></ProjectsSection>
     </div>
   );
 }
