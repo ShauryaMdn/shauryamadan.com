@@ -46,6 +46,26 @@ const projects: SliderItems[] = [
     }
 ];
 
+const education: SliderItems[] = [
+    {
+        title: 'University of Waterloo',
+        description: 'Candidate for Bachelor of Applied Science, Computer Engineering at the University of Waterloo, with an expected graduation in April 2022. Relevant ' +
+        'coursework includes a Data Structures and Algorithms course with C++, Linux Systems Programming in C, a course to make a VHDL compiler using Java, several ' +
+        'digital circuits and hardware courses, as well as many linear algebra, calculus, and statistics courses. Consistent 80+ average each term.'
+    },
+    {
+        title: 'Stanford University Machine Learning Course',
+        description: 'Taken from January to April 2020, I took this course on Coursera, taught by Andrew Ng. I learned a wide variety of topics in Machine Learning, ' +
+        'including supervised learning algorithms like linear and logistical regression, neural networks, and large margin classifiers and SVMs, as well as unsupervised ' +
+        'learning algorithms like K-Means, principal component analysis, and anomaly detection. I also studied concepts like regularization, bias and variance, precision ' +
+        'recall, and Gaussian kernels. I used MATLAB to implement these algorithms to make things such as a OCR program and a movie recommender.'
+    },
+    {
+        title: 'IB Diploma Programme',
+        description: 'Graduated in May 2017 with a points total of 37, taking courses in English, Math, Chemistry, Biology, History, and French.'
+    }
+]
+
 export function ProjectsAndEducationSection() {
     return (
         <Container fluid className ="projects-education-container" id="projects-education">
@@ -60,7 +80,7 @@ export function ProjectsAndEducationSection() {
                     </Col>
                     <Col lg="6" className="projects-education-column">
                         <h1 className="column-title">Learning</h1>
-                        <Slider items={projects}></Slider>
+                        <Slider items={education}></Slider>
                     </Col>
                 </Row>
             </Container>
