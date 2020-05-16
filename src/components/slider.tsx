@@ -19,14 +19,18 @@ function Slide(props: SlideProps) {
 
     return (
         <div className={props.className}>
-            <img className="arrow-icon left" src={require('../assets/images/arrow-left.svg')} alt="left-arrow" onClick={() => props.moveFunction('left')}></img>
+            <div className="arrow-container left" onClick={() => props.moveFunction('left')}>
+                <img className="arrow-icon" src={require('../assets/images/arrow-left.svg')} alt="left-arrow"></img>
+            </div>
             <div className="slider-content">
                 <h1>{props.item.title}</h1>
                 <div className="my-2"></div>
                 <p>{props.item.description}</p>
                 {icons}
             </div>
-            <img className="arrow-icon right" src={require('../assets/images/arrow-right.svg')} alt="right-arrow" onClick={() => props.moveFunction('right')}></img>
+            <div className="arrow-container right" onClick={() => props.moveFunction('right')}>
+                <img className="arrow-icon" src={require('../assets/images/arrow-right.svg')} alt="right-arrow"></img>
+            </div>
         </div>
     )
 }
