@@ -36,6 +36,30 @@
     background-color: #f4efe0;
     padding: 65px 0px;
 
+    .section-title-sticky {
+        position: sticky;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .experience-sticky {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
     .experiences {
         width: 70vw;
         margin: 20px auto;
