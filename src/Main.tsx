@@ -6,11 +6,11 @@ import './Main.scss';
 function Main() {
   return (
     <div>
-      <NavigationBar></NavigationBar>
-      <ShauryaInformation></ShauryaInformation>
-      <ExperienceSection></ExperienceSection>
-      <ProjectsAndEducationSection></ProjectsAndEducationSection>
-      <ContactSection></ContactSection>
+        <NavigationBar/>
+        <ShauryaInformation/>
+        <ExperienceSection/>
+        <ProjectsAndEducationSection/>
+        <ContactSection/>
     </div>
   );
 }

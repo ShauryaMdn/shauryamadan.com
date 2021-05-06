@@ -18,7 +18,7 @@ function Slide(props: SlideProps) {
     }
 
     return (
-        <div className={props.className}>
+        <div className={`slide ${props.className}`}>
             <div className="arrow-container left" onClick={() => props.moveFunction('left')}>
                 <img className="arrow-icon" src={require('../assets/images/arrow-left.svg')} alt="left-arrow"></img>
             </div>
@@ -72,7 +72,7 @@ export class Slider extends Component<SliderProps, SliderState> {
         return (
             <div className="slider-container">
                 {this.props.items.map((value, index) => {
-                    return <Slide key={index} item={value} moveFunction={this.clickArrow} className={this.state.currentIndex === index ? 'active' : 'inactive'}/>;
+                    return <Slide key={index} item={value} moveFunction={this.clickArrow} className={this.state.currentIndex === index ? '' : 'inactive'}/>;
                 })}
             </div>
         );
