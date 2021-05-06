@@ -13,7 +13,7 @@ export function ContactSection() {
             <a target="_blank" href={require('../assets/files/resume.pdf')} rel="noopener noreferrer" className="pdf-logo">
                 <img src={require('../assets/images/pdf-logo.svg')} alt="PDF Logo"></img>
             </a>
-            <a href="mailto:me@shauryamadan.com" className="mail-logo">
+            <a href="mailto:s4madan@uwaterloo.ca" className="mail-logo">
                 <img src={require('../assets/images/mail-logo.svg')} alt="Mail Logo"></img>
             </a>
         </Container>
