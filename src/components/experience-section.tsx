@@ -12,7 +12,7 @@ const experience: Experience[] = [
         employer: 'SS&C Technologies',
         logo: ssnc_logo,
         title: 'Fullstack Developer',
-        time: 'January - April 2020',
+        time: 'January - April 2020, September - December 2020',
         description: [
             'I engineered the search functionality for the new SS&C KnowledgeBase, implementing it end-to-end with Angular, Spring Boot, and PostgreSQL\'s ' +
             'tsvector tool. It was designed to be fast, meet client reliability standards, and customized to work with terminology used in mutual fund ' +
@@ -20,10 +20,11 @@ const experience: Experience[] = [
             'I designed the workflow process that would be used by site admins to handle recommendations and create and edit documents, with several built-in ' +
             'checkpoints to ensure that only high quality documents made it through review. I developed the REST APIs and UI to support this process with ' +
             'Spring Boot and Angular, respectively.',
-            'I was involved in the design and creation of several pages on the KnowledgeBase that were critical to its core functionality, done with Angular ' +
-            'and Angular Material.',
-            'I collaborated with team members to architect a database schema for search and the recommendation workflow.',
-            'I implemented a client-side authorization framework to ensure confidential documents could only be viewed by those with appropriate permissions.'
+            'I implemented end-to-end authentication and access control for the SS&C Blue Sky app. It used the OAuth protocol with a Keycloak authorization ' +
+            'server that was integrated with the company\'s Active Directory for single sign-on.',
+            'I expanded a new system that enabled clients to interact with legacy COBOL programs via HTTPS and modern data interchange formats ' +
+            'and authorization standards like JSON and JWT, improving efficiency for developers accessing these programs.',
+            'I collaborated with team members to design and implement a database schema for search and handling recommendations.'
         ]
     },
     {
