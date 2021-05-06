@@ -26,6 +26,7 @@ function Slide(props: SlideProps) {
                 <h1>{props.item.title}</h1>
                 <div className="my-2"></div>
                 <p>{props.item.description}</p>
+                <div className="spacer"></div>
                 {icons}
             </div>
             <div className="arrow-container right" onClick={() => props.moveFunction('right')}>
