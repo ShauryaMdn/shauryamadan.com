@@ -36,23 +36,26 @@
     background-color: #f4efe0;
     padding: 65px 0px;
 
-    .section-title-sticky {
-        position: sticky;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 1;
-        transition: opacity 0.5s;
-    }
+    @media (min-width: 1100px) and (min-height: 750px) {
 
-    .experience-sticky {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 1;
-        transition: opacity 0.5s;
+        .section-title-sticky {
+            position: sticky;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+
+        .experience-sticky {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
     }
 
     .hidden {
@@ -110,14 +113,23 @@
             color: #4d5055
         }
 
+        @media (min-width: 992px) {
+
+            .slider-container-grid {
+                display: grid;
+
+                .slide-grid {
+                    grid-row-start: 1;
+                    grid-column-start: 1;
+                    grid-row-end: 1;
+                    grid-column-end: 1;
+                }
+            }
+        }
+
         .slider-container {
-            display: grid;
 
             .slide {
-                grid-row-start: 1;
-                grid-column-start: 1;
-                grid-row-end: 1;
-                grid-column-end: 1;
                 display: flex;
                 padding: 10px;
                 border-radius: 20px;
@@ -187,9 +199,17 @@
                 }
             }
 
-            .inactive {
-                opacity: 0;
-                z-index: -1;
+            @media (min-width: 992px) {
+                .inactive {
+                    opacity: 0;
+                    z-index: -1;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .inactive {
+                    display: none;
+                }
             }
         }
     }

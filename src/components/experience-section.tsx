@@ -67,16 +67,25 @@ const experience: Experience[] = [
 
 export class ExperienceSection extends Component<{}, {index: number}> {
     private readonly numElements = experience.length + 1;
+    private readonly isBigEnough: boolean = false;
+    private readonly height: string = '';
 
     constructor(props: {}) {
         super(props);
         this.state = {
-            index: 0
+            index: -1
+        }
+
+        if (window.innerWidth > 1100 && window.innerHeight > 750) {
+            this.isBigEnough = true;
+            this.height = `${this.numElements * 100}vh`;
         }
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.scrollEvent);
+        if (this.isBigEnough) {
+            window.addEventListener('scroll', this.scrollEvent);
+        }
     }
 
     scrollEvent = () => {
@@ -90,15 +99,23 @@ export class ExperienceSection extends Component<{}, {index: number}> {
         this.setState({index: index - 1});
     }
 
+    renderElement = (key: number): boolean => {
+        // If the screen is too small, then we'll just render everything
+        if (!this.isBigEnough) {
+            return true;
+        }
+        return key === this.state.index;
+    }
+
     render() {
         return (
-            <Container fluid className="experience-container" id="experience" style={{height: `${(experience.length + 1)*100}vh`}}>
+            <Container fluid className="experience-container" id="experience" style={{height: this.height}}>
                 <div className={`section-title section-title-sticky ${this.state.index < 0 ? '' : 'hidden'}`}>
                     <h1>My Work Experience</h1>
                 </div>
                 {experience.map((job, key) => {
                     return (
-                        <div key={key} className={`experience-sticky ${this.state.index === key ? '' : 'hidden'}`}>
+                        <div key={key} className={`experience-sticky ${this.renderElement(key) ? '' : 'hidden'}`}>
                             <div className="experiences">
                                 <Row className="experience-row align-items-center">
                                     <Col lg="4">
