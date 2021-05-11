@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+.info-hidden {
+    opacity: 0;
+}
+
 .info-container {
     height: 100vh;
     display: flex;
@@ -11,6 +15,7 @@
     background-image: url('../assets/images/information-background.svg');
     background-size: cover;
     background-attachment: fixed;
+    transition: opacity 3s;
 
     .name-container {
         width: fit-content;
